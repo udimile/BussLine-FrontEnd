@@ -1,0 +1,163 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.main-container {
+  position: relative;
+  width: 430px;
+  height: 932px;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.header {
+  position: relative;
+  width: 430px;
+  height: 118px;
+  margin: 0 0 0 0;
+  background: #592e83;
+  z-index: 16;
+}
+.logo {
+  position: absolute;
+  width: 11.4%;
+  height: 26.27%;
+  top: 50.85%;
+  left: 79.77%;
+  background: url(/imgs/logo.png) no-repeat center;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  width: 17px;
+  height: 22px;
+  top: 65px;
+  left: 24px;
+}
+
+.icon-button img {
+  padding-right: 4px;
+  width: 14px;
+  height: auto;
+}
+
+.rotas {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  height: 20px;
+  top: 65px;
+  left: 48px;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.nav-box {
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  gap: 30px;
+  border-radius: 48px;
+  justify-content: space-evenly;
+  height: 56px;
+  width: 80%;
+  margin-top: 36px;
+  background-color: #592e83;
+}
+
+.search {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search img {
+  width: 18px;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.Buscar_rotas {
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  align-items: center;
+  display: flex;
+}
+
+.nav_buscar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 70px;
+  gap: 15px;
+}
+
+.favoritar {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.section_3 {
+  padding-top: 64px;
+}
+
+.historico {
+  color: #240047;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 22.5px;
+  padding-left: 48px;
+  font-weight: 700;
+}
+
+.p_rotas {
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 40px;
+}
