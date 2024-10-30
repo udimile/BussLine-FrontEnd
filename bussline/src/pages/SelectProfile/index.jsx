@@ -1,22 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BussLine</title>
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
+import { useNavigate } from "react-router-dom";
+import "./index.css";
+import logoRegister from "../../assets/teste.svg";
+
+export default function SelectProfile() {
+  const navigate = useNavigate();
+
+  const handleSelect = (profileType) => {
+    if (profileType === "responsavel") {
+      navigate("/cadastro-resp");
+    } else if (profileType === "estudante") {
+      navigate("/cadastro");
+    }
+  };
+
+  return (
     <main>
-      <div class="sair">
+      <div className="sair">
         <svg
           width="12"
           height="20"
@@ -31,28 +30,35 @@
         </svg>
       </div>
       <header>
-        <img src="{logoRegister}" alt="Logo" />
+        <img src={logoRegister} alt="Logo" />
       </header>
 
       <div id="escolher">
         <form>
           <p>Realizar cadastro como:</p>
-          <div class="opcao">
+          <div className="opcao">
             <input
               type="radio"
               id="responsavel"
               value="responsavel"
               name="opcao"
+              onChange={() => handleSelect("responsavel")}
             />
-            <label for="responsavel">Responsável</label>
-            <input type="radio" id="estudante" value="estudante" name="opcao" />
-            <label for="estudante">Estudante</label>
+            <label htmlFor="responsavel">Responsável</label>
+            <input
+              type="radio"
+              id="estudante"
+              value="estudante"
+              name="opcao"
+              onChange={() => handleSelect("estudante")}
+            />
+            <label htmlFor="estudante">Estudante</label>
           </div>
           <h4>
-            Ja possui uma conta? <a href="../cadastroResp/login.html">Entrar</a>
+            Já possui uma conta? <a href="../cadastroResp/login.html">Entrar</a>
           </h4>
         </form>
       </div>
     </main>
-  </body>
-</html>
+  );
+}

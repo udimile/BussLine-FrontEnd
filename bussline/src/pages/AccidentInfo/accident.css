@@ -43,12 +43,12 @@ body {
   z-index: 16;
 }
 .logo {
-  position: absolute;
+  /* position: absolute; */
   width: 11.4%;
   height: 26.27%;
   top: 50.85%;
   left: 79.77%;
-  background: url(/imgs/logo.png) no-repeat center;
+  /* background: url(/imgs/logo.png) no-repeat center; */
 }
 
 .icon-button {
