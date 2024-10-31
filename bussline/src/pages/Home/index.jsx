@@ -13,12 +13,12 @@ export default function Home() {
   };
 
   return (
-    <div className="main">
-      <header>
-        <div className="icon" onClick={handleMenuClick}>
+    <div className="main-home">
+      <header className="header-home">
+        <div className="icon-home" onClick={handleMenuClick}>
           <img src={menuIcon} alt="Menu" />
         </div>
-        <div className="icon">
+        <div className="icon-home">
           <img src={locationIcon} alt="Localização" />
         </div>
       </header>

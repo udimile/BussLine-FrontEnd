@@ -35,8 +35,8 @@ export default function Login() {
 
   return (
     <>
-      <main>
-        <div className="sair">
+      <main className="main-login">
+        <div className="sair-login">
           <svg
             width="12"
             height="20"
@@ -53,9 +53,9 @@ export default function Login() {
         <header className="header-login">
           <img src={logoRegister} alt="" />
         </header>
-        <div id="login">
+        <div id="login-login">
           <form onSubmit={handleSubmit}>
-            <div className="opcao">
+            <div className="opcao-login">
               <input
                 type="radio"
                 id="responsavel"
@@ -78,8 +78,8 @@ export default function Login() {
               <label htmlFor="estudante">Estudante</label>
             </div>
 
-            <div className="container">
-              <div className="input">
+            <div className="container-login">
+              <div className="input-login">
                 <input
                   type="text"
                   placeholder="RA"
@@ -92,7 +92,7 @@ export default function Login() {
                 ></i>
               </div>
 
-              <div className="input">
+              <div className="input-login">
                 <input
                   type="password"
                   placeholder="Senha"
@@ -107,8 +107,8 @@ export default function Login() {
 
               <h4>Esqueceu a senha?</h4>
 
-              <div className="entrar">
-                <input type="submit" id="entrar" value="Entrar" />
+              <div className="entrar-login">
+                <input type="submit" id="entrar-login" value="Entrar" />
               </div>
 
               <p>

@@ -14,8 +14,8 @@ export default function EditProfile() {
               <span className="edit-profile">Editar Perfil</span>
             </div>
           </div>
-          <div className="top-content" id="logo">
-            <img src={logoIcon} alt="BussLine" className="logo" />
+          <div className="top-content" id="logo-editProfile">
+            <img src={logoIcon} alt="BussLine" className="logo-editProfile" />
           </div>
         </div>
         <div className="page">
@@ -27,7 +27,7 @@ export default function EditProfile() {
           <div className="edit-input">
             <div className="form-group">
               <label>CPF: 000.000.000-00</label>
-              <input type="button" value="✎" className="edit-btn" />
+              <input type="button" className="edit-btn" />
             </div>
             <div className="form-group">
               <label>Celular: (71) 90000-0000</label>

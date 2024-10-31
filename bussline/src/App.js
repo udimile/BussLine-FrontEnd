@@ -12,6 +12,8 @@ import AccidentInfo from "./pages/AccidentInfo";
 import Config from "./pages/Config";
 import About from "./pages/About/indes";
 import SelectProfile from "./pages/SelectProfile";
+import EditProfile from "./pages/EditProfile";
+import TrackRoutes from "./pages/TrackRoutes";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
       <Route path="/config" element={<Config />} />
       <Route path="/about" element={<About />} />
       <Route path="/" element={<SelectProfile />} />
+      <Route path="/editprofile" element={<EditProfile />} />
+      <Route path="/acompanhar-rota" element={<TrackRoutes />} />
     </Routes>
   );
 }

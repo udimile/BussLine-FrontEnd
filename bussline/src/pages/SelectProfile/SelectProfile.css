@@ -21,6 +21,11 @@
   margin-left: 23px;
 }
 
+.header-slectProfile img {
+  margin-left: 130px;
+  margin-top: 10px;
+}
+
 #escolher-slectProfile {
   text-align: center;
   justify-content: center;

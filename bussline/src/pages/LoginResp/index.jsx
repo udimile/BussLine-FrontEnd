@@ -10,7 +10,7 @@ export default function LoginRes() {
 
   const handleChangeTipo = (tipo) => {
     if (tipo === "estudante") {
-      navigate("/");
+      navigate("/login");
     }
   };
 
@@ -27,8 +27,8 @@ export default function LoginRes() {
 
   return (
     <>
-      <main>
-        <div className="sair">
+      <main className="main-loginRes">
+        <div className="sair-loginRes">
           <svg
             width="12"
             height="20"
@@ -43,13 +43,13 @@ export default function LoginRes() {
           </svg>
         </div>
 
-        <header>
+        <header className="header-loginRes">
           <img src={logoRegister} alt="" />
         </header>
 
-        <div id="login">
+        <div id="login-loginRes">
           <form onSubmit={handleSubmit}>
-            <div className="opcao">
+            <div className="opcao-loginRes">
               <input
                 type="radio"
                 id="responsavel"
@@ -70,8 +70,8 @@ export default function LoginRes() {
               <label htmlFor="estudante">Estudante</label>
             </div>
 
-            <div className="container">
-              <div className="input">
+            <div className="container-loginRes">
+              <div className="input-loginRes">
                 <input
                   type="text"
                   placeholder="CPF"
@@ -84,7 +84,7 @@ export default function LoginRes() {
                 ></i>
               </div>
 
-              <div className="input">
+              <div className="input-loginRes">
                 <input
                   type="password"
                   placeholder="Senha"
@@ -99,8 +99,8 @@ export default function LoginRes() {
 
               <h4>Esqueceu a senha?</h4>
 
-              <div className="entrar">
-                <input type="submit" id="entrar" value="Entrar" />
+              <div className="entrar-loginRes">
+                <input type="submit" id="entrar-loginRes" value="Entrar" />
               </div>
 
               <p>

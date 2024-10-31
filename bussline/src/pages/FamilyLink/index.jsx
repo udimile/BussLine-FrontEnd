@@ -1,4 +1,4 @@
-import "./index.css";
+import "./familyLink.css";
 
 import logo from "../../assets/logo-icon.svg";
 import back from "../../assets/back-icon.svg";

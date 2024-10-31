@@ -21,8 +21,8 @@ export default function Register() {
   };
 
   return (
-    <main>
-      <div className="sair" onClick={() => navigate("/")}>
+    <main className="main-Register">
+      <div className="sair-Register" onClick={() => navigate("/")}>
         <svg
           width="12"
           height="20"
@@ -37,13 +37,13 @@ export default function Register() {
         </svg>
       </div>
 
-      <header>
+      <header className="header-Register">
         <img src={logoRegister} alt="Logo" />
       </header>
 
-      <div id="cadastro">
+      <div id="cadastro-Register">
         <form>
-          <div className="opcao">
+          <div className="opcao-Register">
             <input
               type="radio"
               id="responsavel"
@@ -64,13 +64,13 @@ export default function Register() {
             <label htmlFor="estudante">Estudante</label>
           </div>
 
-          <div className="container">
-            <div className="input">
+          <div className="container-Register">
+            <div className="input-Register">
               <input type="text" placeholder="Nome" />
               <i className="fa-solid fa-user" style={{ color: "#592e83" }}></i>
             </div>
 
-            <div className="input">
+            <div className="input-Register">
               <input type="email" placeholder="E-mail" />
               <i
                 className="fa-solid fa-envelope"
@@ -78,13 +78,13 @@ export default function Register() {
               ></i>
             </div>
 
-            <div className="input">
+            <div className="input-Register">
               <input type="password" placeholder="Senha" />
               <i className="fa-solid fa-lock" style={{ color: "#592e83" }}></i>
             </div>
 
             <div className="cadastrar">
-              <input type="submit" id="cadastrar" value="Cadastrar" />
+              <input type="submit" id="cadastrar-Register" value="Cadastrar" />
             </div>
 
             <p>

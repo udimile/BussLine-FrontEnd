@@ -1,16 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
-import "./index.css";
-
+import BottomSheet from "../../components/BottomSheet/index";
 import backIcon from "../../assets/back-purple-icon.svg";
 import locationIcon from "../../assets/location-icon.svg";
-
 import destiny from "../../assets/destiny.svg";
 import destiny2 from "../../assets/destiny2.svg";
-
 import perfil1 from "../../assets/isadora.jpg";
-
 import axios from "axios";
+import "./trackRoutes.css";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoidmljdG9ybm92YWlzIiwiYSI6ImNtMm51N25zcDA3OXQyaW9xbmZlbGo3eTMifQ._eTE_oq4wSfdvkVzRRc4-w";
@@ -78,8 +75,6 @@ export default function TrackRoutes() {
           paint: {
             "line-color": "#592E83",
             "line-width": 3,
-            "line-opacity": 1,
-            "line-blur": 0,
           },
         });
       });
@@ -90,7 +85,7 @@ export default function TrackRoutes() {
 
   return (
     <div className="main">
-      <header>
+      <header className="header-trackRoutes">
         <div className="icon">
           <img src={backIcon} alt="voltar" />
         </div>
@@ -101,39 +96,13 @@ export default function TrackRoutes() {
 
       <div ref={mapContainer} className="map-container"></div>
 
-      <div className={`bottom-sheet ${isSheetOpen ? "open" : ""}`}>
-        <div
-          className="bottom-sheet-header"
-          onClick={() => setIsSheetOpen(!isSheetOpen)}
-        >
-          <div
-            style={{
-              width: "80px",
-              height: "4px",
-              backgroundColor: "#592E83",
-              borderRadius: "2px",
-              marginBottom: "19px",
-            }}
-          ></div>
-          <button className="btn-acompanhar">Acompanhar rota</button>
-        </div>
-        <div className="bottom-sheet-content">
-          <h3>Detalhes da viagem</h3>
-          <div className="distino">
-            <img className="destiny-icon" src={destiny} alt="" />
-            <p>Ponto de partida: Av. Imbuí</p>
-          </div>
-          <div className="distino">
-            <img className="destiny-icon" src={destiny2} alt="" />
-            <p>Destino: UCSal - Universidade Católica do Salvador</p>
-          </div>
-        </div>
-        <div class="line"></div>
-        <div className="user">
-          <img className="perfil-icon" src={perfil1} alt="" />
-          <p user-info-rota>Isadora esta a caminho!</p>
-        </div>
-      </div>
+      <BottomSheet
+        isOpen={isSheetOpen}
+        toggleSheet={() => setIsSheetOpen(!isSheetOpen)}
+        destiny={destiny}
+        destiny2={destiny2}
+        perfil1={perfil1}
+      />
     </div>
   );
 }

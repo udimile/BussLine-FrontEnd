@@ -12,8 +12,8 @@ export default function Config() {
               <span class="config">Configurações</span>
             </div>
           </div>
-          <div class="top-content" id="logo">
-            <img src={logoIcon} alt="BussLine" class="logo" />
+          <div class="top-content" id="logo-config">
+            <img src={logoIcon} alt="BussLine" class="logo-config" />
           </div>
         </div>
         <div class="page">

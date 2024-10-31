@@ -16,99 +16,116 @@ import logoutIcon from "../../assets/logout.svg";
 export default function Menu() {
   return (
     <>
-      <nav className="sidebar">
-        <div className="top">
-          <div className="top-content">
-            <div className="return">
+      <nav className="sidebar-menu">
+        <div className="top-menu">
+          <div className="top-content-menu">
+            <div className="return-menu">
               <img src={backIcon} alt="return" />
               <span className="menu">Menu</span>
             </div>
           </div>
-          <div className="top-content" id="logo">
-            <img src={logoIcon} alt="BussLine" className="logo" />
+          <div className="top-content-menu" id="logo-menu">
+            <img src={logoIcon} alt="BussLine" className="logo-menu" />
           </div>
         </div>
 
-        <ul>
-          <li className="sidebar-content">
+        <ul className="ul-menu">
+          <li className="sidebar-content-menu">
             <Link to="#">
-              <img src={profileIcon} alt="profile-pic" className="icon" />
+              <img src={profileIcon} alt="profile-pic" className="icon-menu" />
             </Link>
-            <div className="info">
-              <span className="name">Username</span>
-              <span className="email">user@email.com</span>
-              <span className="editprofile">
-                <Link to="#">Editar perfil</Link>
+            <div className="info-menu">
+              <span className="name-menu">Username</span>
+              <span className="email-menu">user@email.com</span>
+              <span className="editprofile-menu">
+                <Link to="/editprofile">Editar perfil</Link>
               </span>
             </div>
           </li>
 
-          <li className="sidebar-content">
+          <li className="sidebar-content-menu">
             <Link to="/home">
               {" "}
-              <img src={qrIcon} alt="qrcode" className="icon" />
+              <img src={qrIcon} alt="qrcode" className="icon-menu-bar" />
             </Link>
-            <span className="name">QRCODE</span>
+            <span className="name-menu">QRCODE</span>
           </li>
 
-          <li className="sidebar-content">
+          <li className="sidebar-content-menu">
             <Link to="/help-center">
-              <img src={helpCenter} alt="helpCenter" className="icon" />
+              <img
+                src={helpCenter}
+                alt="helpCenter"
+                className="icon-menu-bar"
+              />
             </Link>
-            <span className="name">CENTRAL DE AJUDA</span>
+            <span className="name-menu">CENTRAL DE AJUDA</span>
           </li>
 
-          <hr />
+          <hr className="hr-menu" />
 
-          <li className="sidebar-content">
+          <li className="sidebar-content-menu">
             <Link to="/home">
-              <img src={homeIcon} alt="home" className="icon" />
+              <img src={homeIcon} alt="home" className="icon-menu-bar" />
             </Link>
-            <span className="name">MAPA</span>
+            <span className="name-menu">MAPA</span>
           </li>
 
-          <li className="sidebar-content">
+          <li className="sidebar-content-menu">
             <Link to="/routes">
-              <img src={routesIcon} alt="routes" className="icon" />
+              <img src={routesIcon} alt="routes" className="icon-menu-bar" />
             </Link>
-            <span className="name">ROTAS</span>
+            <span className="name-menu">ROTAS</span>
           </li>
 
-          <li className="sidebar-content">
+          <li className="sidebar-content-menu">
             <Link to="/favorite">
-              <img src={favoriteIcon} alt="favorite" className="icon" />
+              <img
+                src={favoriteIcon}
+                alt="favorite"
+                className="icon-menu-bar"
+              />
             </Link>
-            <span className="name">FAVORITOS</span>
+            <span className="name-menu">FAVORITOS</span>
           </li>
 
-          <hr />
+          <hr className="hr-menu" />
 
-          <li className="sidebar-content">
+          <li className="sidebar-content-menu">
             <Link to="/accident-info">
-              <img src={accidentIcon} alt="accidentInfo" className="icon" />
+              <img
+                src={accidentIcon}
+                alt="accidentInfo"
+                className="icon-menu-bar"
+              />
             </Link>
-            <span className="name">INFORMAÇÕES DE ACIDENTES</span>
+            <span className="name-menu">INFORMAÇÕES DE ACIDENTES</span>
           </li>
 
-          <hr />
+          <hr className="hr-menu" />
 
-          <li className="sidebar-content">
+          <li className="sidebar-content-menu">
             <Link to="/config">
-              <img src={configIcon} alt="config" className="icon" />
+              <img src={configIcon} alt="config" className="icon-menu-bar" />
             </Link>
-            <span className="name">CONFIGURAÇÕES</span>
+            <span className="name-menu">CONFIGURAÇÕES</span>
           </li>
 
-          <li className="sidebar-content">
+          <li className="sidebar-content-menu">
             <Link to="/about">
-              <img src={aboutIcon} alt="about" className="icon" />
+              <img src={aboutIcon} alt="about" className="icon-menu-bar" />
             </Link>
-            <span className="name">SOBRE</span>
+            <span className="name-menu">SOBRE</span>
           </li>
 
-          <li className="sidebar-content">
+          <li className="sidebar-content-menu">
             <Link to="#">
-              <img src={logoutIcon} alt="logout" className="icon" id="logout" />
+              <img
+                src={logoutIcon}
+                alt="logout"
+                className="icon-menu-bar"
+                id="logout-menu"
+              />
             </Link>
           </li>
         </ul>

@@ -21,8 +21,8 @@ export default function RegisterRes() {
   };
 
   return (
-    <main>
-      <div className="sair" onClick={() => navigate("/")}>
+    <main className="main-resgisterRes">
+      <div className="sair-resgisterRes" onClick={() => navigate("/")}>
         <svg
           width="12"
           height="20"
@@ -37,13 +37,13 @@ export default function RegisterRes() {
         </svg>
       </div>
 
-      <header>
-        <img src={logoRegister} alt="Logo" />
+      <header className="header-resgisterRes">
+        <img className="header-registerRes" src={logoRegister} alt="Logo" />
       </header>
 
-      <div id="cadastro">
+      <div id="cadastro-resgisterRes">
         <form>
-          <div className="opcao">
+          <div className="opcao-resgisterRes">
             <input
               type="radio"
               id="responsavel"
@@ -64,13 +64,13 @@ export default function RegisterRes() {
             <label htmlFor="estudante">Estudante</label>
           </div>
 
-          <div className="container">
-            <div className="input">
+          <div className="container-resgisterRes">
+            <div className="input-resgisterRes">
               <input type="text" placeholder="Nome" />
               <i className="fa-solid fa-user" style={{ color: "#592e83" }}></i>
             </div>
 
-            <div className="input">
+            <div className="input-resgisterRes">
               <input type="email" placeholder="E-mail" />
               <i
                 className="fa-solid fa-envelope"
@@ -78,13 +78,17 @@ export default function RegisterRes() {
               ></i>
             </div>
 
-            <div className="input">
+            <div className="input-resgisterRes">
               <input type="password" placeholder="Senha" />
               <i className="fa-solid fa-lock" style={{ color: "#592e83" }}></i>
             </div>
 
-            <div className="cadastrar">
-              <input type="submit" id="cadastrar" value="Cadastrar" />
+            <div className="cadastrar-resgisterRes">
+              <input
+                type="submit"
+                id="cadastrar-resgisterRes"
+                value="Cadastrar"
+              />
             </div>
 
             <p>

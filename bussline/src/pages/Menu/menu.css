@@ -12,47 +12,47 @@ body {
   background: gray;
 }
 
-.sidebar {
+.sidebar-menu {
   width: 430px;
   height: 932px;
   border-radius: 15px;
   background: #fff;
 }
 
-.top {
+.top-menu {
   height: 118px;
   border-radius: 15px 15px 0px 0px;
   background: #592e83;
   color: #fff;
 }
 
-.top .top-content {
+.top-menu .top-content-menu {
   display: inline-block;
 }
 
-.top-content .return {
+.top-content-menu .return-menu {
   display: inline-flex;
   text-align: center;
   padding: 65px 24px 31px;
 }
 
-.return > span {
+.return-menu > span {
   padding-top: 2px;
   padding-left: 5px;
 }
 
-.top-content .logo {
+.top-content-menu .logo-menu {
   padding-left: 240px;
 }
 
-ul {
+.ul-menu {
   margin: 0;
   margin-left: 25px;
   padding: 40px 0 40px 1%;
   list-style-type: none;
 }
 
-.sidebar-content {
+.sidebar-content-menu {
   display: flex;
   align-items: center;
   text-align: center;
@@ -60,13 +60,13 @@ ul {
   padding-bottom: 8px;
 }
 
-.info {
+.info-menu {
   display: flex;
   flex-direction: column;
   justify-content: left;
 }
 
-.name {
+.name-menu {
   padding-left: 20px;
   text-decoration: none;
   text-align: center;
@@ -76,13 +76,15 @@ ul {
   font-weight: 700;
 }
 
-.email {
+.email-menu {
   padding-left: 35px;
   font-size: 12px;
   font-weight: 400;
+
+  color: black;
 }
 
-.editprofile > a {
+.editprofile-menu > a {
   text-decoration: none;
   padding-left: 20px;
   color: #592e83;
@@ -90,16 +92,21 @@ ul {
   font-weight: 700;
 }
 
-#logout {
+#logout-menu {
   padding-top: 20px;
 }
 
-hr {
-  width: 360px;
+.hr-menu {
+  width: 380px;
   height: 1px;
   border: 17px;
   border-top: 1px solid #592e83;
   list-style-type: none;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: -6px;
+}
+.icon-menu {
+  width: 51px;
+  height: 51px;
 }
