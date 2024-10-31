@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "./index.css";
+import "./SelectProfile.css";
 import logoRegister from "../../assets/teste.svg";
 
 export default function SelectProfile() {
@@ -14,8 +14,8 @@ export default function SelectProfile() {
   };
 
   return (
-    <main>
-      <div className="sair">
+    <main className="main-slectProfile">
+      <div className="sair-slectProfile">
         <svg
           width="12"
           height="20"
@@ -29,14 +29,14 @@ export default function SelectProfile() {
           />
         </svg>
       </div>
-      <header>
+      <header className="header-slectProfile">
         <img src={logoRegister} alt="Logo" />
       </header>
 
-      <div id="escolher">
+      <div id="escolher-slectProfile">
         <form>
           <p>Realizar cadastro como:</p>
-          <div className="opcao">
+          <div className="opcao-slectProfile">
             <input
               type="radio"
               id="responsavel"
@@ -54,7 +54,7 @@ export default function SelectProfile() {
             />
             <label htmlFor="estudante">Estudante</label>
           </div>
-          <h4>
+          <h4 className="h4-slectProfile">
             Já possui uma conta? <a href="../cadastroResp/login.html">Entrar</a>
           </h4>
         </form>
