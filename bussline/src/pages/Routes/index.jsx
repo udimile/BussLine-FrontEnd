@@ -1,5 +1,8 @@
 import "./index.css";
 import backIcon from "../../assets/back-icon.svg";
+import lupa from "../../assets/lupa.svg";
+import favoritar from "../../assets/favoritar.svg";
+
 export default function Rotas() {
   return (
     <>
@@ -19,12 +22,12 @@ export default function Rotas() {
             <div className="nav-box">
               <div className="nav_buscar">
                 <button className="search">
-                  {/* <img src="/imgs/lupa.png" alt="Buscar" /> */}
+                  <img src={lupa} alt="Lupa" />
                 </button>
                 <span className="Buscar_rotas">Buscar Rotas</span>
               </div>
               <button className="favoritar">
-                {/* <img src="/imgs/favoritos_botao.png" alt="Favoritar" /> */}
+                <img src={favoritar} alt="favoritar" />
               </button>
             </div>
           </nav>

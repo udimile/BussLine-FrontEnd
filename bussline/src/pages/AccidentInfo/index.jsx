@@ -1,5 +1,7 @@
 import "./accident.css";
 import backIcon from "../../assets/back-icon.svg";
+import exclamacao from "../../assets/exclamacao.svg";
+
 export default function AccidentInfo() {
   return (
     <>
@@ -18,7 +20,7 @@ export default function AccidentInfo() {
           <div class="contigencia">
             <div class="alinhar">
               <button>
-                {/* <img class="icon_ex" src="/imgs/Exclamação.png" alt="" /> */}
+                < img src={exclamacao} alt="Exclamação" /> 
               </button>
               <div class="box">
                 <p>Contingência</p>
@@ -32,7 +34,7 @@ export default function AccidentInfo() {
           <div class="acidente">
             <div class="alinhar">
               <button>
-                {/* <img class="icon_ex" src="/imgs/Exclamação.png" alt="" /> */}
+                < img src={exclamacao} alt="Exclamação" /> 
               </button>
               <div class="box">
                 <p>Acidente</p>
@@ -44,7 +46,7 @@ export default function AccidentInfo() {
           <div class="transito">
             <div class="alinhar">
               <button>
-                {/* <img class="icon_ex" src="/imgs/Exclamação.png" alt="" /> */}
+                < img src={exclamacao} alt="Exclamação" /> 
               </button>
               <div class="box">
                 <p>Trânsito</p>
@@ -59,7 +61,7 @@ export default function AccidentInfo() {
           <div class="acidente">
             <div class="alinhar">
               <button>
-                {/* <img class="icon_ex" src="/imgs/Exclamação.png" alt="" /> */}
+                < img src={exclamacao} alt="Exclamação" /> 
               </button>
               <div class="box">
                 <p>Acidente</p>
