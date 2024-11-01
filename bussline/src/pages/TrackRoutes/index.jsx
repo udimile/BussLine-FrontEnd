@@ -6,8 +6,9 @@ import locationIcon from "../../assets/location-icon.svg";
 import destiny from "../../assets/destiny.svg";
 import destiny2 from "../../assets/destiny2.svg";
 import perfil1 from "../../assets/isadora.jpg";
-import Map from "../../components/Mapa/mapa";
+import Map from "../../components/Mapa/mapaTrack"; // ajuste o caminho se necessário
 import "./trackRoutes.css";
+import MapaTrack from "../../components/Mapa/mapaTrack";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoidmljdG9ybm92YWlzIiwiYSI6ImNtMm51N25zcDA3OXQyaW9xbmZlbGo3eTMifQ._eTE_oq4wSfdvkVzRRc4-w";
@@ -26,7 +27,7 @@ export default function TrackRoutes() {
         </div>
       </header>
 
-      <Map />
+      <MapaTrack />
 
       <BottomSheet
         isOpen={isSheetOpen}
