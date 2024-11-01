@@ -44,7 +44,7 @@ export default function Menu() {
           </li>
 
           <li className="sidebar-content-menu">
-            <Link to="/home">
+            <Link to="/em-rota">
               {" "}
               <img src={qrIcon} alt="qrcode" className="icon-menu-bar" />
             </Link>
