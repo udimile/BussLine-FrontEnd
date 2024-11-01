@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import LoginRes from "./pages/LoginResp";
@@ -15,26 +16,41 @@ import SelectProfile from "./pages/SelectProfile";
 import EditProfile from "./pages/EditProfile";
 import TrackRoutes from "./pages/TrackRoutes";
 
-function App() {
-  return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/login-res" element={<LoginRes />} />
-      <Route path="/cadastro" element={<Register />} />
-      <Route path="/cadastro-resp" element={<RegisterRes />} />
-      <Route path="/menu" element={<Menu />} />
+import "./components/Animations/animations.css";
 
-      <Route path="/help-center" element={<HelpCenter />} />
-      <Route path="/routes" element={<Rotas />} />
-      <Route path="/favorite" element={<Favorite />} />
-      <Route path="/accident-info" element={<AccidentInfo />} />
-      <Route path="/config" element={<Config />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/" element={<SelectProfile />} />
-      <Route path="/editprofile" element={<EditProfile />} />
-      <Route path="/acompanhar-rota" element={<TrackRoutes />} />
-    </Routes>
+function App() {
+  const location = useLocation();
+
+  return (
+    <SwitchTransition>
+      <CSSTransition
+        key={location.pathname}
+        classNames="slide"
+        timeout={300}
+        unmountOnExit
+      >
+        <div>
+          <Routes location={location}>
+            <Route path="/home" element={<Home />} />
+            <Route path="/help-center" element={<HelpCenter />} />
+            <Route path="/routes" element={<Rotas />} />
+            <Route path="/favorite" element={<Favorite />} />
+            <Route path="/accident-info" element={<AccidentInfo />} />
+            <Route path="/config" element={<Config />} />
+            <Route path="/about" element={<About />} />
+
+            <Route path="/login" element={<Login />} />
+            <Route path="/login-res" element={<LoginRes />} />
+            <Route path="/cadastro" element={<Register />} />
+            <Route path="/cadastro-resp" element={<RegisterRes />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/" element={<SelectProfile />} />
+            <Route path="/editprofile" element={<EditProfile />} />
+            <Route path="/acompanhar-rota" element={<TrackRoutes />} />
+          </Routes>
+        </div>
+      </CSSTransition>
+    </SwitchTransition>
   );
 }
 
