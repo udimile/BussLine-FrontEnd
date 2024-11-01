@@ -26,9 +26,12 @@ export default function Rotas() {
                 </button>
                 <span className="Buscar_rotas">Buscar Rotas</span>
               </div>
-              <button className="favoritar">
-                <img src={favoritar} alt="favoritar" />
-              </button>
+              <div className="favoritar">
+                <label class="switch_routes">
+                    <input type="checkbox" />
+                    <span class="slider_routes round_routes"></span>
+                </label>
+              </div>
             </div>
           </nav>
         </section>
