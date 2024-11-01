@@ -9,6 +9,8 @@ export default function Map() {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const route = useRef([]);
+  const marker = useRef(null);
+  const stepIndex = useRef(0);
 
   useEffect(() => {
     if (map.current) return;
@@ -70,7 +72,35 @@ export default function Map() {
             "line-blur": 0,
           },
         });
+
+        marker.current = new mapboxgl.Marker()
+          .setLngLat(routeCoordinates[0])
+          .addTo(map.current);
+
+        animateMarker();
       });
+    }
+
+    function animateMarker() {
+      const interval = setInterval(() => {
+        if (stepIndex.current < route.current.length - 1) {
+          stepIndex.current += 1;
+
+          marker.current.setLngLat(route.current[stepIndex.current]);
+          map.current.panTo(route.current[stepIndex.current]);
+
+          const remainingRoute = route.current.slice(stepIndex.current);
+          map.current.getSource("route").setData({
+            type: "Feature",
+            geometry: {
+              type: "LineString",
+              coordinates: remainingRoute,
+            },
+          });
+        } else {
+          clearInterval(interval);
+        }
+      }, 1000);
     }
 
     getRoute();
