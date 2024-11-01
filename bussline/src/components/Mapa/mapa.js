@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl";
 import axios from "axios";
+import perfil from "../../assets/isadora.jpg";
+import "./mapa.css";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoidmljdG9ybm92YWlzIiwiYSI6ImNtMm51N25zcDA3OXQyaW9xbmZlbGo3eTMifQ._eTE_oq4wSfdvkVzRRc4-w";
@@ -9,8 +11,8 @@ export default function Map() {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const route = useRef([]);
-  const marker = useRef(null);
   const stepIndex = useRef(0);
+  const marker = useRef(null);
 
   useEffect(() => {
     if (map.current) return;
@@ -27,7 +29,6 @@ export default function Map() {
     async function getRoute() {
       const start = [-38.41321120563727, -12.94767196829192];
       const end = [-38.421761407779556, -12.945104053736781];
-
       const query = await axios.get(
         `https://api.mapbox.com/directions/v5/mapbox/driving/${start.join(
           ","
@@ -73,7 +74,16 @@ export default function Map() {
           },
         });
 
-        marker.current = new mapboxgl.Marker()
+        const markerElement = document.createElement("div");
+        markerElement.className = "icon-marker";
+
+        const img = document.createElement("img");
+        img.src = perfil;
+        markerElement.appendChild(img);
+
+        marker.current = new mapboxgl.Marker(markerElement, {
+          offset: [10, -920],
+        })
           .setLngLat(routeCoordinates[0])
           .addTo(map.current);
 
@@ -86,8 +96,9 @@ export default function Map() {
         if (stepIndex.current < route.current.length - 1) {
           stepIndex.current += 1;
 
-          marker.current.setLngLat(route.current[stepIndex.current]);
-          map.current.panTo(route.current[stepIndex.current]);
+          const newCoordinates = route.current[stepIndex.current];
+          marker.current.setLngLat(newCoordinates);
+          map.current.panTo(newCoordinates);
 
           const remainingRoute = route.current.slice(stepIndex.current);
           map.current.getSource("route").setData({
