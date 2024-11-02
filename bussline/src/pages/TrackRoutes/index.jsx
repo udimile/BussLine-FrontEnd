@@ -6,7 +6,6 @@ import locationIcon from "../../assets/location-icon.svg";
 import destiny from "../../assets/destiny.svg";
 import destiny2 from "../../assets/destiny2.svg";
 import perfil1 from "../../assets/isadora.jpg";
-import Map from "../../components/Mapa/mapaTrack"; // ajuste o caminho se necessário
 import "./trackRoutes.css";
 import MapaTrack from "../../components/Mapa/mapaTrack";
 
