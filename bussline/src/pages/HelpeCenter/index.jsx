@@ -32,8 +32,8 @@ export default function HelpCenter() {
         </nav>
       </section>
 
-      <div class="perguntas">
-        <img src={expandir} alt="Expandir"/>                    
+      <div class="perguntas">                   
+        <img src={expandir} alt="Expandir"/> 
         <p>PERGUNTAS FREQUENTES</p>
       </div>
 
