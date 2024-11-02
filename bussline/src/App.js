@@ -17,6 +17,8 @@ import EditProfile from "./pages/EditProfile";
 import TrackRoutes from "./pages/TrackRoutes";
 
 import "./components/Animations/animations.css";
+import InTransit from "./pages/InTransit/index";
+import FamilyLink from "./pages/FamilyLink";
 
 function App() {
   const location = useLocation();
@@ -47,6 +49,8 @@ function App() {
             <Route path="/" element={<SelectProfile />} />
             <Route path="/editprofile" element={<EditProfile />} />
             <Route path="/acompanhar-rota" element={<TrackRoutes />} />
+            <Route path="/em-rota" element={<InTransit />} />
+            <Route path="/family-link" element={<FamilyLink />} />
           </Routes>
         </div>
       </CSSTransition>

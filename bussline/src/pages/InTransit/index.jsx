@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import "./index.css";
 import menuIcon from "../../assets/menu-icon.svg";
 import locationIcon from "../../assets/location-icon.svg";
-import MapHome from "../../components/Mapa/mapaHome";
+import Map from "../../components/Mapa/mapa";
 
-export default function Home() {
+export default function InTransit() {
   const navigate = useNavigate();
 
   const handleMenuClick = () => {
-    navigate("/menu");
+    navigate("/em-rota");
   };
 
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         </div>
       </header>
 
-      <MapHome />
+      <Map />
     </div>
   );
 }
