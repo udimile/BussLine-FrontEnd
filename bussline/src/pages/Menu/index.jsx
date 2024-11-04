@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./menu.css";
 import backIcon from "../../assets/back-icon.svg";
 import logoIcon from "../../assets/logo.svg";
@@ -12,10 +13,21 @@ import accidentIcon from "../../assets/accidentInfo.svg";
 import configIcon from "../../assets/config.svg";
 import aboutIcon from "../../assets/about.svg";
 import logoutIcon from "../../assets/logout.svg";
-
+import Loading from "../../components/Loading/Loading";
 export default function Menu() {
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleQRCodeClick = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate("/em-rota");
+    }, 2000);
+  };
   return (
     <>
+      {isLoading && <Loading />}
       <nav className="sidebar-menu">
         <div className="top-menu">
           <div className="top-content-menu">
@@ -44,10 +56,12 @@ export default function Menu() {
           </li>
 
           <li className="sidebar-content-menu">
-            <Link to="/em-rota">
-              {" "}
+            <button
+              onClick={handleQRCodeClick}
+              className="icon-menu-bar-button"
+            >
               <img src={qrIcon} alt="qrcode" className="icon-menu-bar" />
-            </Link>
+            </button>
             <span className="name-menu">QRCODE</span>
           </li>
 
