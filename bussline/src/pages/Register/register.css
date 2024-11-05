@@ -79,7 +79,9 @@
   font-size: 15px;
   left: 6px;
 }
-
+.cadastrar-Register {
+  margin-top: -90px;
+}
 #cadastrar-Register {
   background-color: #000;
   color: #fff;
