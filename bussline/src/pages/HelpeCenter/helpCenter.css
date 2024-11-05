@@ -73,7 +73,7 @@
   font-size: 16px;
   margin-left: 20px;
   width: 210px;
-  color: #000; 
+  color: #000;
   font-style: normal;
   font-weight: 700px;
   line-height: normal;
@@ -84,7 +84,7 @@
   width: 352px;
   height: 42px;
   flex-shrink: 0;
-  fill: #592E83;
+  fill: #592e83;
 }
 
 #principal p {
@@ -94,20 +94,20 @@
 }
 
 .pergunta {
-  background-color: #592E83;
+  background-color: #592e83;
   border-radius: 7px;
-  border-color: #592E83;
-  background: #592E83;
+  border-color: #592e83;
+  background: #592e83;
   width: 350px;
   height: 45px;
-  margin-left: 20px;
+  margin-left: 35px;
 }
 
 .pergunta p {
   width: 257px;
   height: 19px;
   flex-shrink: 0;
-  color: var(--Schemes-On-Primary, #FFF);
+  color: var(--Schemes-On-Primary, #fff);
   font-size: 18px;
   text-align: center;
   align-items: center;
