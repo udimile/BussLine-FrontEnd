@@ -7,9 +7,9 @@
 
 .help-center {
   background: var(--Schemes-On-Primary, #fff);
-  width: 430px;
+  width: 390px;
   height: 932px;
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
 .nav-container_helpCenter {
@@ -100,7 +100,7 @@
   background: #592e83;
   width: 350px;
   height: 45px;
-  margin-left: 35px;
+  margin-left: 20px;
 }
 
 .pergunta p {

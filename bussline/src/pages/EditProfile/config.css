@@ -7,20 +7,20 @@
 }
 
 body {
-  width: 430px;
+  width: 390px;
   height: 932px;
   background: gray;
 }
 
 .container-principal {
-  width: 430px;
+  width: 390px;
   height: 932px;
   background: #fff;
 }
 
 .top {
   height: 118px;
-  border-radius: 15px 15px 0px 0px;
+  /* border-radius: 15px 15px 0px 0px; */
   background: #592e83;
   color: #fff;
 }
@@ -41,7 +41,7 @@ body {
 }
 
 .top-content .logo-editProfile {
-  padding-left: 190px;
+  padding-left: 140px;
 }
 
 .profile-info {
@@ -79,7 +79,7 @@ body {
 }
 
 .form-group {
-  width: 368px;
+  width: 340px;
   margin-top: 11px;
   margin-bottom: 11px;
   padding-top: 20px;
@@ -119,7 +119,7 @@ body {
   padding-top: 10px;
   cursor: pointer;
   display: flex;
-  margin-left: 45%;
+  margin-left: 48%;
   justify-content: center;
   align-self: center;
 }
