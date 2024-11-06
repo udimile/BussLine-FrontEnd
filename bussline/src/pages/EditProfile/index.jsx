@@ -2,14 +2,20 @@ import "./config.css";
 import logoIcon from "../../assets/logo.svg";
 import backIcon from "../../assets/back-icon.svg";
 import profile from "../../assets/profile.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function EditProfile() {
+  const navigate = useNavigate();
+
+  const handleVoltar = () => {
+    navigate("/menuMain");
+  };
   return (
     <>
       <main className="container-principal">
         <div className="top">
           <div className="top-content">
-            <div className="return">
+            <div className="return" onClick={handleVoltar}>
               <img src={backIcon} alt="return" />
               <span className="edit-profile">Editar Perfil</span>
             </div>
