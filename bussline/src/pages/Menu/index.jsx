@@ -122,7 +122,7 @@ export default function Menu() {
             <Link to="/config">
               <img src={configIcon} alt="config" className="icon-menu-bar" />
             </Link>
-            <span className="name-menu">CONFIGURAÇÕES</span>
+            <span className="name-menu-bar">CONFIGURAÇÕES</span>
           </li>
 
           <li className="sidebar-content-menu">
