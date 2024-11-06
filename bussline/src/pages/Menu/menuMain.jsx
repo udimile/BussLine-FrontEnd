@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../services/Api";
+import Loading from "../../components/Loading/Loading";
 
 export default function MenuMain() {
   const navigate = useNavigate();
@@ -35,5 +36,9 @@ export default function MenuMain() {
     fetchUserData();
   }, [navigate]);
 
-  return null;
+  return (
+    <>
+      <Loading />
+    </>
+  );
 }

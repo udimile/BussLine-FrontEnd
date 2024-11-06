@@ -6,20 +6,20 @@ import api from "../../services/Api";
 
 export default function Login() {
   const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+  const [password, setPassword] = useState("");
   const [tipo, setTipo] = useState("estudante");
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!email || !senha) {
+    if (!email || !password) {
       alert("Por favor, preencha todos os campos.");
       return;
     }
 
     try {
-      const response = await api.post("/login", { email, senha });
+      const response = await api.post("/login", { email, password });
       const { token } = response.data;
 
       localStorage.setItem("token", token);
@@ -106,8 +106,8 @@ export default function Login() {
                 <input
                   type="password"
                   placeholder="Senha"
-                  value={senha}
-                  onChange={(e) => setSenha(e.target.value)}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <i
                   className="fa-solid fa-lock"

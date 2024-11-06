@@ -9,7 +9,7 @@ export default function InTransit() {
   const navigate = useNavigate();
 
   const handleMenuClick = () => {
-    navigate("/em-rota");
+    navigate("/menuMain");
   };
 
   return (

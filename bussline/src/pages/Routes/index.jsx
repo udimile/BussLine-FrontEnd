@@ -2,15 +2,20 @@ import "./index.css";
 import backIcon from "../../assets/back-icon.svg";
 import lupa from "../../assets/lupa.svg";
 import favoritar from "../../assets/favoritar.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function Rotas() {
+  const navigate = useNavigate();
+  const handleMenuClick = () => {
+    navigate("/menuMain");
+  };
   return (
     <>
       <main className="main-container">
         <section className="section_1">
           <div className="header">
             <div className="logo"></div>
-            <button className="icon-button">
+            <button className="icon-button" onClick={handleMenuClick}>
               <img src={backIcon} alt="Seta" />
             </button>
             <span className="rotas">Rotas</span>
@@ -28,8 +33,8 @@ export default function Rotas() {
               </div>
               <div className="favoritar">
                 <label class="switch_routes">
-                    <input type="checkbox" />
-                    <span class="slider_routes round_routes"></span>
+                  <input type="checkbox" />
+                  <span class="slider_routes round_routes"></span>
                 </label>
               </div>
             </div>

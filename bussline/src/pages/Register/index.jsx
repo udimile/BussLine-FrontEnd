@@ -13,7 +13,7 @@ export default function Register() {
     email: "",
     password: "",
     cpf: "",
-    studentId: "",
+    ra: "",
   });
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState("success");
@@ -159,8 +159,8 @@ export default function Register() {
             <div className="input-Register">
               <input
                 type="text"
-                name="studentId"
-                value={formData.studentId}
+                name="ra"
+                value={formData.ra}
                 onChange={handleChange}
                 placeholder="RA"
                 required

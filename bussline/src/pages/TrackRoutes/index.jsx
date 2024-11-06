@@ -8,19 +8,26 @@ import destiny2 from "../../assets/destiny2.svg";
 import perfil1 from "../../assets/isadora.jpg";
 import "./trackRoutes.css";
 import MapaTrack from "../../components/Mapa/mapaTrack";
+import { useNavigate } from "react-router-dom";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoidmljdG9ybm92YWlzIiwiYSI6ImNtMm51N25zcDA3OXQyaW9xbmZlbGo3eTMifQ._eTE_oq4wSfdvkVzRRc4-w";
 
 export default function TrackRoutes() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const navigate = useNavigate(); // Inicia o hook de navegação
 
+  const handleVoltar = () => {
+    navigate("/menuMain"); // Redireciona para a página menuMain
+  };
   return (
     <div className="main">
       <header className="header-trackRoutes">
-        <div className="icon">
-          <img src={backIcon} alt="voltar" />
-        </div>
+        <button onClick={handleVoltar} className="icon">
+          <div className="icon">
+            <img src={backIcon} alt="voltar" />
+          </div>
+        </button>
         <div className="icon">
           <img src={locationIcon} alt="Localização" />
         </div>

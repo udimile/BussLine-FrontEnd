@@ -141,6 +141,7 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
+  margin-left: -25px;
 }
 
 .section_3 {

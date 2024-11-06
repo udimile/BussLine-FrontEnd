@@ -33,6 +33,7 @@ export default function MenuRes() {
 
           setUserData({ name: response.data.name, email: response.data.email });
         } else {
+          navigate("/login");
         }
       } catch (error) {
         console.error("Erro ao buscar dados do usuário:", error);
@@ -41,6 +42,13 @@ export default function MenuRes() {
 
     fetchUserData();
   }, [navigate]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+
+    navigate("/login");
+  };
+
   return (
     <>
       <nav className="sidebar-menu">
@@ -140,14 +148,14 @@ export default function MenuRes() {
           </li>
 
           <li className="sidebar-content-menu">
-            <Link to="#">
+            <button onClick={handleLogout} className="logout-button">
               <img
                 src={logoutIcon}
                 alt="logout"
                 className="icon-menu-bar"
                 id="logout-menu"
               />
-            </Link>
+            </button>
           </li>
         </ul>
       </nav>
