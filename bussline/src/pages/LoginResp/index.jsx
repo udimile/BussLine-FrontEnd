@@ -7,7 +7,7 @@ import api from "../../services/Api";
 
 export default function LoginRes() {
   const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleChangeTipo = (tipo) => {
@@ -19,7 +19,7 @@ export default function LoginRes() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!email || !senha) {
+    if (!email || !password) {
       alert("Por favor, preencha todos os campos.");
       return;
     }
@@ -27,7 +27,7 @@ export default function LoginRes() {
     try {
       const response = await api.post("login", {
         email,
-        senha,
+        password,
       });
 
       const { token } = response.data;
@@ -103,8 +103,8 @@ export default function LoginRes() {
                 <input
                   type="password"
                   placeholder="Senha"
-                  value={senha}
-                  onChange={(e) => setSenha(e.target.value)}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                 />
                 <i
