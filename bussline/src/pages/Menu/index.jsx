@@ -62,7 +62,7 @@ export default function Menu() {
             >
               <img src={qrIcon} alt="qrcode" className="icon-menu-bar" />
             </button>
-            <span className="name-menu">QRCODE</span>
+            <span className="name-menu-bar">QRCODE</span>
           </li>
 
           <li className="sidebar-content-menu">
@@ -73,7 +73,7 @@ export default function Menu() {
                 className="icon-menu-bar"
               />
             </Link>
-            <span className="name-menu">CENTRAL DE AJUDA</span>
+            <span className="name-menu-bar">CENTRAL DE AJUDA</span>
           </li>
 
           <hr className="hr-menu" />
@@ -82,14 +82,14 @@ export default function Menu() {
             <Link to="/home">
               <img src={homeIcon} alt="home" className="icon-menu-bar" />
             </Link>
-            <span className="name-menu">MAPA</span>
+            <span className="name-menu-bar">MAPA</span>
           </li>
 
           <li className="sidebar-content-menu">
             <Link to="/routes">
               <img src={routesIcon} alt="routes" className="icon-menu-bar" />
             </Link>
-            <span className="name-menu">ROTAS</span>
+            <span className="name-menu-bar">ROTAS</span>
           </li>
 
           <li className="sidebar-content-menu">
@@ -100,7 +100,7 @@ export default function Menu() {
                 className="icon-menu-bar"
               />
             </Link>
-            <span className="name-menu">FAVORITOS</span>
+            <span className="name-menu-bar">FAVORITOS</span>
           </li>
 
           <hr className="hr-menu" />
@@ -113,7 +113,7 @@ export default function Menu() {
                 className="icon-menu-bar"
               />
             </Link>
-            <span className="name-menu">INFORMAÇÕES DE ACIDENTES</span>
+            <span className="name-menu-bar">INFORMAÇÕES DE ACIDENTES</span>
           </li>
 
           <hr className="hr-menu" />
@@ -129,7 +129,7 @@ export default function Menu() {
             <Link to="/about">
               <img src={aboutIcon} alt="about" className="icon-menu-bar" />
             </Link>
-            <span className="name-menu">SOBRE</span>
+            <span className="name-menu-bar">SOBRE</span>
           </li>
 
           <li className="sidebar-content-menu">
