@@ -2,25 +2,36 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./login.css";
 import logoRegister from "../../assets/teste.svg";
+import api from "../../services/Api";
 
 export default function Login() {
-  const [ra, setRa] = useState("");
-  const [senha, setSenha] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [tipo, setTipo] = useState("estudante");
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!ra || !senha) {
+    if (!email || !password) {
       alert("Por favor, preencha todos os campos.");
       return;
     }
 
-    if (tipo === "responsavel") {
-      navigate("/login-res");
-    } else {
-      navigate("/home");
+    try {
+      const response = await api.post("/login", { email, password });
+      const { token } = response.data;
+
+      localStorage.setItem("token", token);
+
+      if (tipo === "responsavel") {
+        navigate("/login-res");
+      } else {
+        navigate("/home");
+      }
+    } catch (error) {
+      console.error("Erro no login:", error.response.data.message);
+      alert("Login falhou. Verifique suas credenciais e tente novamente.");
     }
   };
 
@@ -32,7 +43,6 @@ export default function Login() {
       navigate("/login-res");
     }
   };
-
   return (
     <>
       <main className="main-login">
@@ -82,9 +92,9 @@ export default function Login() {
               <div className="input-login">
                 <input
                   type="text"
-                  placeholder="RA"
-                  value={ra}
-                  onChange={(e) => setRa(e.target.value)}
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <i
                   className="fa-solid fa-qrcode"
@@ -96,8 +106,8 @@ export default function Login() {
                 <input
                   type="password"
                   placeholder="Senha"
-                  value={senha}
-                  onChange={(e) => setSenha(e.target.value)}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <i
                   className="fa-solid fa-lock"

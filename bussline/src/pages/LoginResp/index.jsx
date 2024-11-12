@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+
 import "./loginRes.css";
 import logoRegister from "../../assets/teste.svg";
+import api from "../../services/Api";
 
 export default function LoginRes() {
-  const [cpf, setCpf] = useState("");
-  const [senha, setSenha] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleChangeTipo = (tipo) => {
@@ -14,15 +16,27 @@ export default function LoginRes() {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!cpf || !senha) {
+    if (!email || !password) {
       alert("Por favor, preencha todos os campos.");
       return;
     }
 
-    navigate("/home");
+    try {
+      const response = await api.post("login", {
+        email,
+        password,
+      });
+
+      const { token } = response.data;
+      localStorage.setItem("token", token);
+      navigate("/home");
+    } catch (error) {
+      console.error("Erro ao fazer login:", error);
+      alert("Credenciais inválidas. Tente novamente.");
+    }
   };
 
   return (
@@ -73,10 +87,11 @@ export default function LoginRes() {
             <div className="container-loginRes">
               <div className="input-loginRes">
                 <input
-                  type="text"
-                  placeholder="CPF"
-                  value={cpf}
-                  onChange={(e) => setCpf(e.target.value)}
+                  type="email"
+                  placeholder="E-mail"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
                 <i
                   className="fa-solid fa-qrcode"
@@ -88,8 +103,9 @@ export default function LoginRes() {
                 <input
                   type="password"
                   placeholder="Senha"
-                  value={senha}
-                  onChange={(e) => setSenha(e.target.value)}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
                 />
                 <i
                   className="fa-solid fa-lock"

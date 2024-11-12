@@ -55,7 +55,7 @@ export default function SelectProfile() {
             <label htmlFor="estudante">Estudante</label>
           </div>
           <h4 className="h4-slectProfile">
-            Já possui uma conta? <a href="../cadastroResp/login.html">Entrar</a>
+            Já possui uma conta? <a href="/login">Entrar</a>
           </h4>
         </form>
       </div>

@@ -15,11 +15,16 @@ export default function FamilyLink() {
     navigate("/acompanhar-rota");
   };
 
+  const handleVoltar = () => {
+    navigate("/menuMain");
+  };
   return (
     <div className="main-family ">
       <header className="header-family ">
         <div className="header-section-family ">
-          <img className="back-img-family " src={back} alt="" />
+          <button onClick={handleVoltar}>
+            <img className="back-img-family " src={back} alt="" />
+          </button>
           <h1 className="page-title-family ">Family Link</h1>
         </div>
         <img className="logo-family " src={logo} alt="" />

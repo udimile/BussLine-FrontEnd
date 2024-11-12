@@ -1,15 +1,21 @@
 import "./accident.css";
 import backIcon from "../../assets/back-icon.svg";
 import exclamacao from "../../assets/exclamacao.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function AccidentInfo() {
+  const navigate = useNavigate();
+
+  const handleVoltar = () => {
+    navigate("/menuMain");
+  };
   return (
     <>
       <main class="main-container">
         <section class="section_1">
           <div class="header">
             <div class="logo"></div>
-            <button class="icon-button">
+            <button class="icon-button" onClick={handleVoltar}>
               <img src={backIcon} alt="Seta" />
             </button>
             <span class="rotas">Informações de Acidentes</span>
@@ -20,7 +26,7 @@ export default function AccidentInfo() {
           <div class="contigencia">
             <div class="alinhar">
               <button>
-                < img src={exclamacao} alt="Exclamação" /> 
+                <img src={exclamacao} alt="Exclamação" />
               </button>
               <div class="box">
                 <p>Contingência</p>
@@ -34,7 +40,7 @@ export default function AccidentInfo() {
           <div class="acidente">
             <div class="alinhar">
               <button>
-                < img src={exclamacao} alt="Exclamação" /> 
+                <img src={exclamacao} alt="Exclamação" />
               </button>
               <div class="box">
                 <p>Acidente</p>
@@ -46,7 +52,7 @@ export default function AccidentInfo() {
           <div class="transito">
             <div class="alinhar">
               <button>
-                < img src={exclamacao} alt="Exclamação" /> 
+                <img src={exclamacao} alt="Exclamação" />
               </button>
               <div class="box">
                 <p>Trânsito</p>
@@ -61,7 +67,7 @@ export default function AccidentInfo() {
           <div class="acidente">
             <div class="alinhar">
               <button>
-                < img src={exclamacao} alt="Exclamação" /> 
+                <img src={exclamacao} alt="Exclamação" />
               </button>
               <div class="box">
                 <p>Acidente</p>

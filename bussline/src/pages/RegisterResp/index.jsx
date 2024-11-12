@@ -1,11 +1,21 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "../../services/Api";
 import logoRegister from "../../assets/teste.svg";
 import "./registerRes.css";
+import Alert from "../../components/Alert/alert";
 
 export default function RegisterRes() {
   const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState("responsavel");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    cpf: "",
+  });
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertType, setAlertType] = useState("success");
 
   useEffect(() => {
     setSelectedOption("responsavel");
@@ -20,8 +30,36 @@ export default function RegisterRes() {
     }
   };
 
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("/registration/guardian", formData);
+      setAlertType("success");
+      setShowAlert(true);
+    } catch (error) {
+      console.error("Erro ao cadastrar responsável:", error);
+      setAlertType("error");
+      setShowAlert(true);
+    }
+  };
+
+  const handleAlertClose = () => {
+    setShowAlert(false);
+    if (alertType === "success") {
+      navigate("/login");
+    }
+  };
+
   return (
     <main className="main-resgisterRes">
+      {showAlert && <Alert type={alertType} onClose={handleAlertClose} />}
       <div className="sair-resgisterRes" onClick={() => navigate("/")}>
         <svg
           width="12"
@@ -42,7 +80,7 @@ export default function RegisterRes() {
       </header>
 
       <div id="cadastro-resgisterRes">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="opcao-resgisterRes">
             <input
               type="radio"
@@ -66,12 +104,26 @@ export default function RegisterRes() {
 
           <div className="container-resgisterRes">
             <div className="input-resgisterRes">
-              <input type="text" placeholder="Nome" />
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Nome"
+                required
+              />
               <i className="fa-solid fa-user" style={{ color: "#592e83" }}></i>
             </div>
 
             <div className="input-resgisterRes">
-              <input type="email" placeholder="E-mail" />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="E-mail"
+                required
+              />
               <i
                 className="fa-solid fa-envelope"
                 style={{ color: "#592e83" }}
@@ -79,8 +131,30 @@ export default function RegisterRes() {
             </div>
 
             <div className="input-resgisterRes">
-              <input type="password" placeholder="Senha" />
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Senha"
+                required
+              />
               <i className="fa-solid fa-lock" style={{ color: "#592e83" }}></i>
+            </div>
+
+            <div className="input-resgisterRes">
+              <input
+                type="text"
+                name="cpf"
+                value={formData.cpf}
+                onChange={handleChange}
+                placeholder="CPF"
+                required
+              />
+              <i
+                className="fa-solid fa-id-card"
+                style={{ color: "#592e83" }}
+              ></i>
             </div>
 
             <div className="cadastrar-resgisterRes">

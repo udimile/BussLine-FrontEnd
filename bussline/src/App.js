@@ -19,6 +19,9 @@ import TrackRoutes from "./pages/TrackRoutes";
 import "./components/Animations/animations.css";
 import InTransit from "./pages/InTransit/index";
 import FamilyLink from "./pages/FamilyLink";
+import LoadingScreen from "./components/tela/LoadingScreen";
+import MenuRes from "./pages/Menu/menuRes";
+import MenuMain from "./pages/Menu/menuMain";
 
 function App() {
   const location = useLocation();
@@ -46,11 +49,14 @@ function App() {
             <Route path="/cadastro" element={<Register />} />
             <Route path="/cadastro-resp" element={<RegisterRes />} />
             <Route path="/menu" element={<Menu />} />
-            <Route path="/" element={<SelectProfile />} />
+            <Route path="/menuMain" element={<MenuMain />} />
+            <Route path="/menu-responsavel" element={<MenuRes />} />
+            <Route path="/escolher-perfil" element={<SelectProfile />} />
             <Route path="/editprofile" element={<EditProfile />} />
             <Route path="/acompanhar-rota" element={<TrackRoutes />} />
             <Route path="/em-rota" element={<InTransit />} />
             <Route path="/family-link" element={<FamilyLink />} />
+            <Route path="/" element={<LoadingScreen />} />
           </Routes>
         </div>
       </CSSTransition>

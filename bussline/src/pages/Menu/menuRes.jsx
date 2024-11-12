@@ -4,7 +4,7 @@ import "./menu.css";
 import backIcon from "../../assets/back-icon.svg";
 import logoIcon from "../../assets/logo.svg";
 import profileIcon from "../../assets/profile.svg";
-import qrIcon from "../../assets/qrcode.svg";
+
 import helpCenter from "../../assets/helpCenter.svg";
 import homeIcon from "../../assets/home.svg";
 import favoriteIcon from "../../assets/favorite.svg";
@@ -13,12 +13,11 @@ import accidentIcon from "../../assets/accidentInfo.svg";
 import configIcon from "../../assets/config.svg";
 import aboutIcon from "../../assets/about.svg";
 import logoutIcon from "../../assets/logout.svg";
-import Loading from "../../components/Loading/Loading";
 import api from "../../services/Api";
-export default function Menu() {
-  const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate();
+
+export default function MenuRes() {
   const [userData, setUserData] = useState({ name: "", email: "" });
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -49,16 +48,9 @@ export default function Menu() {
 
     navigate("/login");
   };
-  const handleQRCodeClick = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-      navigate("/em-rota");
-    }, 2000);
-  };
+
   return (
     <>
-      {isLoading && <Loading />}
       <nav className="sidebar-menu">
         <div className="top-menu">
           <div className="top-content-menu">
@@ -89,16 +81,6 @@ export default function Menu() {
           </li>
 
           <li className="sidebar-content-menu">
-            <button
-              onClick={handleQRCodeClick}
-              className="icon-menu-bar-button"
-            >
-              <img src={qrIcon} alt="qrcode" className="icon-menu-bar" />
-            </button>
-            <span className="name-menu-bar">QRCODE</span>
-          </li>
-
-          <li className="sidebar-content-menu">
             <Link to="/help-center">
               <img
                 src={helpCenter}
@@ -126,14 +108,14 @@ export default function Menu() {
           </li>
 
           <li className="sidebar-content-menu">
-            <Link to="/favorite">
+            <Link to="/family-link">
               <img
                 src={favoriteIcon}
                 alt="favorite"
                 className="icon-menu-bar"
               />
             </Link>
-            <span className="name-menu-bar">FAVORITOS</span>
+            <span className="name-menu-bar">FAMILY LINK</span>
           </li>
 
           <hr className="hr-menu" />
@@ -167,14 +149,12 @@ export default function Menu() {
 
           <li className="sidebar-content-menu">
             <button onClick={handleLogout} className="logout-button">
-              <Link to="#">
-                <img
-                  src={logoutIcon}
-                  alt="logout"
-                  className="icon-menu-bar"
-                  id="logout-menu"
-                />
-              </Link>
+              <img
+                src={logoutIcon}
+                alt="logout"
+                className="icon-menu-bar"
+                id="logout-menu"
+              />
             </button>
           </li>
         </ul>

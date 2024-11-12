@@ -1,11 +1,22 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "../../services/Api";
+import Alert from "../../components/Alert/alert";
 import logoRegister from "../../assets/teste.svg";
 import "./register.css";
 
 export default function Register() {
   const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState("estudante");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    cpf: "",
+    ra: "",
+  });
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertType, setAlertType] = useState("success");
 
   useEffect(() => {
     setSelectedOption("estudante");
@@ -20,8 +31,36 @@ export default function Register() {
     }
   };
 
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("/registration/student", formData);
+      setAlertType("success");
+    } catch (error) {
+      console.error("Erro ao cadastrar estudante:", error);
+      setAlertType("error");
+    } finally {
+      setShowAlert(true);
+    }
+  };
+
+  const handleAlertClose = () => {
+    setShowAlert(false);
+    if (alertType === "success") {
+      navigate("/login");
+    }
+  };
+
   return (
     <main className="main-Register">
+      {showAlert && <Alert type={alertType} onClose={handleAlertClose} />}{" "}
       <div className="sair-Register" onClick={() => navigate("/")}>
         <svg
           width="12"
@@ -36,13 +75,11 @@ export default function Register() {
           />
         </svg>
       </div>
-
       <header className="header-Register">
         <img src={logoRegister} alt="Logo" />
       </header>
-
       <div id="cadastro-Register">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="opcao-Register">
             <input
               type="radio"
@@ -66,12 +103,26 @@ export default function Register() {
 
           <div className="container-Register">
             <div className="input-Register">
-              <input type="text" placeholder="Nome" />
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Nome"
+                required
+              />
               <i className="fa-solid fa-user" style={{ color: "#592e83" }}></i>
             </div>
 
             <div className="input-Register">
-              <input type="email" placeholder="E-mail" />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="E-mail"
+                required
+              />
               <i
                 className="fa-solid fa-envelope"
                 style={{ color: "#592e83" }}
@@ -79,11 +130,48 @@ export default function Register() {
             </div>
 
             <div className="input-Register">
-              <input type="password" placeholder="Senha" />
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Senha"
+                required
+              />
               <i className="fa-solid fa-lock" style={{ color: "#592e83" }}></i>
             </div>
 
-            <div className="cadastrar">
+            <div className="input-Register">
+              <input
+                type="text"
+                name="cpf"
+                value={formData.cpf}
+                onChange={handleChange}
+                placeholder="CPF"
+                required
+              />
+              <i
+                className="fa-solid fa-id-card"
+                style={{ color: "#592e83" }}
+              ></i>
+            </div>
+
+            <div className="input-Register">
+              <input
+                type="text"
+                name="ra"
+                value={formData.ra}
+                onChange={handleChange}
+                placeholder="RA"
+                required
+              />
+              <i
+                className="fa-solid fa-id-badge"
+                style={{ color: "#592e83" }}
+              ></i>
+            </div>
+
+            <div className="cadastrar-Register">
               <input type="submit" id="cadastrar-Register" value="Cadastrar" />
             </div>
 

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
+
 import menuIcon from "../../assets/menu-icon.svg";
 import locationIcon from "../../assets/location-icon.svg";
 import MapHome from "../../components/Mapa/mapaHome";
@@ -8,8 +9,16 @@ import MapHome from "../../components/Mapa/mapaHome";
 export default function Home() {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+    } else {
+      navigate("/login");
+    }
+  }, [navigate]);
+
   const handleMenuClick = () => {
-    navigate("/menu");
+    navigate("/menuMain");
   };
 
   return (

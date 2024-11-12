@@ -1,13 +1,19 @@
 import "./config.css";
 import logoIcon from "../../assets/logo.svg";
 import backIcon from "../../assets/back-icon.svg";
+import { useNavigate } from "react-router-dom";
 export default function Config() {
+  const navigate = useNavigate();
+
+  const handleVoltar = () => {
+    navigate("/menuMain");
+  };
   return (
     <>
       <main class="container-principal">
         <div class="top">
           <div class="top-content">
-            <div class="return">
+            <div class="return" onClick={handleVoltar}>
               <img src={backIcon} alt="return" />
               <span class="config">Configurações</span>
             </div>

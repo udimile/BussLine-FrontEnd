@@ -1,4 +1,6 @@
 .loading-overlay {
+  width: 430px;
+  height: 932px;
   position: fixed;
   top: 0;
   left: 0;
