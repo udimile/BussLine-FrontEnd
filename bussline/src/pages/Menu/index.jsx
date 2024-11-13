@@ -61,14 +61,16 @@ export default function Menu() {
       {isLoading && <Loading />}
       <nav className="sidebar-menu">
         <div className="top-menu">
-          <div className="top-content-menu">
-            <div className="return-menu">
-              <img src={backIcon} alt="return" />
-              <span className="menu">Menu</span>
+          <div className="box-box">
+            <div className="top-content-menu">
+              <div className="return-menu">
+                <img src={backIcon} alt="return" />
+                <span className="menu">Menu</span>
+              </div>
             </div>
-          </div>
-          <div className="top-content-menu" id="logo-menu">
-            <img src={logoIcon} alt="BussLine" className="logo-menu" />
+            <div className="top-content-menu" id="logo-menu">
+              <img src={logoIcon} alt="BussLine" className="logo-menu" />
+            </div>
           </div>
         </div>
 

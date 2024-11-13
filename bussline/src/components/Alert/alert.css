@@ -1,18 +1,18 @@
 .alert-overlay {
-  width: 932px;
-  height: 430px;
+  width: 100vw;
+  height: 20vh;
   position: absolute;
-  top: -100px;
-  left: -250px;
+  align-items: center;
 
   display: flex;
-  align-items: center;
+
   justify-content: center;
   z-index: 1000;
 }
 
 .alert-container {
   display: flex;
+
   align-items: center;
   justify-content: center;
   animation: slideDownUp 3s ease-in-out forwards;

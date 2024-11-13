@@ -1,4 +1,4 @@
-import "./config.css";
+import "./EditProflie.css";
 import logoIcon from "../../assets/logo.svg";
 import backIcon from "../../assets/back-icon.svg";
 import profile from "../../assets/profile.svg";
@@ -12,19 +12,19 @@ export default function EditProfile() {
   };
   return (
     <>
-      <main className="container-principal">
-        <div className="top">
-          <div className="top-content">
+      <main className="container-principal-edit">
+        <div className="top-edit">
+          <div className="top-content-edit">
             <div className="return" onClick={handleVoltar}>
               <img src={backIcon} alt="return" />
               <span className="edit-profile">Editar Perfil</span>
             </div>
           </div>
-          <div className="top-content" id="logo-editProfile">
+          <div className="top-content-edit" id="logo-editProfile-edit">
             <img src={logoIcon} alt="BussLine" className="logo-editProfile" />
           </div>
         </div>
-        <div className="page">
+        <div className="page-profile">
           <div className="profile-info">
             <img src={profile} alt="profile-pic" />
             <span className="name">Username</span>
@@ -52,7 +52,7 @@ export default function EditProfile() {
               <input type="button" value="✎" className="edit-btn" />
             </div>
           </div>
-          <button className="save">SALVAR</button>
+          <button className="save ">SALVAR</button>
         </div>
       </main>
     </>

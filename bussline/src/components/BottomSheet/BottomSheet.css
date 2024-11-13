@@ -29,7 +29,7 @@
   }
   to {
     transform: translateY(0);
-    top: 600px;
+    top: 50%;
   }
 }
 

@@ -15,10 +15,10 @@ mapboxgl.accessToken =
 
 export default function TrackRoutes() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleVoltar = () => {
-    navigate("/menuMain"); 
+    navigate("/menuMain");
   };
   return (
     <div className="main">

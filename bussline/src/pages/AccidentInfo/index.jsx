@@ -37,6 +37,7 @@ export default function AccidentInfo() {
             </p>
             <hr />
           </div>
+
           <div class="acidente">
             <div class="alinhar">
               <button>

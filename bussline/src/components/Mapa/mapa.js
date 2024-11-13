@@ -80,9 +80,26 @@ export default function Map() {
         const img = document.createElement("img");
         img.src = perfil;
         markerElement.appendChild(img);
-
+        const offsetValue =
+          window.innerWidth >= 1920
+            ? [10, -800]
+            : window.innerWidth === 1024
+            ? [10, -950]
+            : window.innerWidth === 414
+            ? [10, -730]
+            : window.innerWidth === 390
+            ? [10, -690]
+            : window.innerWidth === 375
+            ? [10, -650]
+            : window.innerWidth === 360
+            ? [10, -700]
+            : window.innerWidth === 820
+            ? [10, -1100]
+            : window.innerWidth === 768
+            ? [10, -950]
+            : [10, -1200];
         marker.current = new mapboxgl.Marker(markerElement, {
-          offset: [10, -920],
+          offset: offsetValue,
         })
           .setLngLat(routeCoordinates[0])
           .addTo(map.current);

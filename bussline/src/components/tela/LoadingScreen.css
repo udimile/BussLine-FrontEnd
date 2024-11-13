@@ -4,16 +4,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 932px;
+  width: 100vw;
+  height: 100vh;
   background-color: #592e83;
 }
 
 .loading-logo {
   position: absolute;
-  width: 138px;
-  height: 136px;
-  top: 358px;
-  left: 170px;
+  width: auto;
+  height: auto;
+  top: 35.5%;
+  left: 49%;
   animation: rotate 2s linear infinite;
 }
 
@@ -33,4 +34,87 @@
   font-size: 40px;
   font-weight: 600;
   margin-top: 20px;
+}
+
+@media (min-width: 360px) {
+  .loading-screen {
+    width: 100vw;
+    height: 100vh;
+  }
+  .loading-logo {
+    top: 35%;
+    left: 43.5%;
+  }
+}
+@media (min-width: 375px) {
+  .loading-screen {
+    width: 100vw;
+    height: 100vh;
+  }
+  .loading-logo {
+    top: 33%;
+    left: 43.5%;
+  }
+}
+@media (min-width: 390px) {
+  .loading-screen {
+    width: 100vw;
+    height: 100vh;
+  }
+  .loading-logo {
+    top: 34%;
+    left: 44%;
+  }
+}
+@media (min-width: 412px) {
+  .loading-screen {
+    width: 100vw;
+    height: 100vh;
+  }
+  .loading-logo {
+    top: 35%;
+    left: 44%;
+  }
+}
+@media (min-width: 768px) {
+  .loading-screen {
+    width: 100vw;
+    height: 100vh;
+  }
+  .loading-logo {
+    top: 38.6%;
+    left: 46.7%;
+  }
+}
+@media (min-width: 800px) {
+  .loading-screen {
+    width: 100vw;
+    height: 100vh;
+  }
+  .loading-logo {
+    top: 41%;
+    left: 46.7%;
+  }
+}
+
+@media (min-width: 820px) {
+  .loading-screen {
+    width: 100vw;
+    height: 100vh;
+  }
+  .loading-logo {
+    top: 40%;
+    left: 46.7%;
+  }
+}
+
+@media (min-width: 1080px) {
+  .loading-screen {
+    width: 100vw;
+    height: 100vh;
+  }
+  .loading-logo {
+    top: 36.3%;
+    left: 48.6%;
+  }
 }
