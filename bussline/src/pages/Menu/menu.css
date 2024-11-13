@@ -127,7 +127,7 @@ body {
   height: 51px;
 }
 
-@media (min-width: 820px) {
+@media (min-width: 768px) {
   body {
     width: 100vw;
     height: 150vw;

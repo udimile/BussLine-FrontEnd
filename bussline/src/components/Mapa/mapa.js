@@ -92,12 +92,12 @@ export default function Map() {
             : window.innerWidth === 375
             ? [10, -650]
             : window.innerWidth === 360
-            ? [10, -700]
+            ? [10, -720]
             : window.innerWidth === 820
             ? [10, -1100]
             : window.innerWidth === 768
             ? [10, -950]
-            : [10, -1200];
+            : [10, -1000];
         marker.current = new mapboxgl.Marker(markerElement, {
           offset: offsetValue,
         })

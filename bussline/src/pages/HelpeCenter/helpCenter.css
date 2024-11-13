@@ -114,3 +114,10 @@
   align-items: center;
   padding-top: 12px;
 }
+@media (min-width: 360px) and (max-width: 429px) {
+  .help-center {
+    width: 100vw;
+    height: 150vh;
+    background: #fff;
+  }
+}
