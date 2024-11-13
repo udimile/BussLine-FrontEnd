@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  background: gray;
+}
+
+.sidebar-menu {
+  width: 100vw;
+  height: 100%;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.top-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 118px;
+  /* border-radius: 15px 15px 0px 0px; */
+  background: #592e83;
+  color: #fff;
+}
+
+.top-menu .top-content-menu {
+  display: inline-block;
+}
+
+.top-content-menu .return-menu {
+  display: inline-flex;
+  text-align: center;
+  padding: 65px 24px 31px;
+}
+
+.return-menu > span {
+  padding-top: 2px;
+  padding-left: 5px;
+}
+
+.box-box {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-menu {
+  margin-top: 75%;
+}
+.ul-menu {
+  margin: 0;
+  margin-left: 25px;
+  padding: 40px 0 40px 1%;
+  list-style-type: none;
+}
+
+.sidebar-content-menu {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.info-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  margin-left: 20px;
+}
+.name-menu {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+.name-menu-bar {
+  margin-left: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.email-menu {
+  font-size: 12px;
+  font-weight: 400;
+
+  color: black;
+}
+
+.editprofile-menu > a {
+  text-decoration: none;
+  padding-left: 20px;
+  color: #592e83;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#logout-menu {
+  padding-top: 20px;
+}
+
+.hr-menu {
+  width: 90vw;
+  height: 1px;
+  border: 17px;
+  border-top: 1px solid #592e83;
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: -6px;
+}
+.icon-menu {
+  width: 51px;
+  height: 51px;
+}
+
+@media (min-width: 820px) {
+  body {
+    width: 100vw;
+    height: 150vw;
+    background: gray;
+  }
+
+  .sidebar-menu {
+    width: 100vw;
+    height: 150vw;
+    border-radius: 15px;
+    background: #fff;
+  }
+}
