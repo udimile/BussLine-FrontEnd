@@ -8,8 +8,8 @@ import "./alert.css";
 export default function Alert({ type, onClose }) {
   useEffect(() => {
     const timer = setTimeout(() => {
-      onClose(); // Chama a função para fechar o alerta e prosseguir
-    }, 3000); // 3 segundos para a animação antes de fechar o alerta
+      onClose();
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [onClose]);

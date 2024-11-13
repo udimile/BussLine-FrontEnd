@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./index.css";
+import "./home.css";
 
 import menuIcon from "../../assets/menu-icon.svg";
 import locationIcon from "../../assets/location-icon.svg";

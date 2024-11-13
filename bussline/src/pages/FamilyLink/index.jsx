@@ -21,13 +21,15 @@ export default function FamilyLink() {
   return (
     <div className="main-family ">
       <header className="header-family ">
-        <div className="header-section-family ">
-          <button onClick={handleVoltar}>
-            <img className="back-img-family " src={back} alt="" />
-          </button>
-          <h1 className="page-title-family ">Family Link</h1>
+        <div className="box-da-box">
+          <div className="header-section-family ">
+            <button onClick={handleVoltar}>
+              <img className="back-img-family " src={back} alt="" />
+            </button>
+            <h1 className="page-title-family ">Family Link</h1>
+          </div>
+          <img className="logo-family " src={logo} alt="" />
         </div>
-        <img className="logo-family " src={logo} alt="" />
       </header>
 
       <div className="container-profile-family ">

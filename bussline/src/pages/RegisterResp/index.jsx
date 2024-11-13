@@ -75,8 +75,8 @@ export default function RegisterRes() {
         </svg>
       </div>
 
-      <header className="header-resgisterRes">
-        <img className="header-registerRes" src={logoRegister} alt="Logo" />
+      <header className="header-resgisteRes">
+        <img src={logoRegister} alt="Logo" />
       </header>
 
       <div id="cadastro-resgisterRes">

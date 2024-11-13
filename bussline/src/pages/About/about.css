@@ -7,9 +7,10 @@
 
 .about {
   background: var(--Schemes-On-Primary, #fff);
-  width: 430px;
-  height: 932px;
+  width: 100vw;
+  height: 100vh;
   border-radius: 15px;
+  justify-content: space-between;
 }
 
 #quemsomos {
@@ -34,7 +35,7 @@
 }
 
 #descricao {
-  width: 382px;
+  width: 100vw;
   margin-top: 40px;
   text-align: justify;
   padding-left: 20px;
@@ -42,20 +43,20 @@
 
 .termos {
   display: flex;
-  width: 320px;
+  width: 100vw;
   height: 15px;
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
   color: #007aff;
   font-size: 16px;
-  margin-top: 550px;
+
   text-align: center;
 }
 
 .outro {
   display: flex;
-  width: 320px;
+  width: 100vw;
   height: 15px;
   flex-direction: column;
   justify-content: center;
@@ -66,5 +67,5 @@
   font-size: 16px;
 }
 footer {
-  margin-left: 40px;
+  margin-top: 70%;
 }

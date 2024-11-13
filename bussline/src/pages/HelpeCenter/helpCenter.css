@@ -7,8 +7,8 @@
 
 .help-center {
   background: var(--Schemes-On-Primary, #fff);
-  width: 390px;
-  height: 932px;
+  width: 100vw;
+  height: 100vh;
   /* border-radius: 15px; */
 }
 
@@ -42,7 +42,7 @@
   width: 50px;
   height: auto;
   display: flex;
-  align-items: center;
+  margin-left: -10%;
 }
 
 .procurar_hc {
@@ -50,7 +50,7 @@
   font-family: Poppins, var(--default-font-family);
   font-size: 16px;
   font-weight: 400;
-  align-items: center;
+  margin-left: 45%;
   display: flex;
   white-space: nowrap;
 }
@@ -85,6 +85,7 @@
   height: 42px;
   flex-shrink: 0;
   fill: #592e83;
+  margin-left: 1%;
 }
 
 #principal p {
@@ -98,7 +99,7 @@
   border-radius: 7px;
   border-color: #592e83;
   background: #592e83;
-  width: 350px;
+  width: 90vw;
   height: 45px;
   margin-left: 20px;
 }
