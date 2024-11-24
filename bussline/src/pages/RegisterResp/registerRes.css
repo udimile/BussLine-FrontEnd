@@ -1,3 +1,19 @@
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
@@ -7,99 +23,86 @@
 
 .main-resgisterRes {
   width: 100vw;
-  height: 150vh;
-  /* border-radius: 15px; */
+  min-height: 100vh;
   background: #592e83;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  display: block;
-  justify-content: center;
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 2rem 1rem;
+  position: relative;
 }
 
 .sair-resgisterRes svg {
-  margin-top: 37px;
-  margin-left: 23px;
-}
-.header-registerRes {
-  display: flex;
-  width: 100vw;
-  justify-content: center;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 24px;
+  height: 24px;
 }
 
-#cadastro-resgisterRes {
-  text-align: center;
+.header-registerRes {
+  display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 1rem;
 }
 
 #cadastro-resgisterRes p {
-  margin-top: 24px;
+  margin-top: 1.5rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .opcao-resgisterRes {
-  margin-right: 7px;
-  margin-top: 50px;
+  margin-top: 3rem;
+  text-align: center;
 }
-.header-resgisteRes {
-  display: flex;
-  width: 100vw;
-  justify-content: center;
-}
+
 .opcao-resgisterRes label {
-  justify-content: space-between;
-  padding: 0 25px;
+  padding: 0 1.5rem;
+  color: #fff;
 }
 
 .input-resgisterRes {
-  background-color: rgb(255, 255, 255);
-  width: 368px;
-  height: 51px;
-  position: relative;
+  background-color: #fff;
+  width: 100%;
+  width: 23rem;
+  height: 3.1875rem;
   display: flex;
   align-items: center;
-  border-radius: 15px;
-  margin-bottom: 25px;
+  border-radius: 0.9375rem;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
 .input-resgisterRes input {
-  border-radius: 15px;
-  position: absolute;
+  border-radius: 0.9375rem;
   height: 100%;
   width: 100%;
   border: none;
-  padding-left: 24px;
+  padding-left: 1.5rem;
+  font-size: 1rem;
 }
 
 .input-resgisterRes ::placeholder {
   color: #592e83;
-  font-size: 15px;
-  font-style: normal;
+  font-size: 0.9375rem;
   font-weight: 300;
-  line-height: normal;
-}
-
-.input-resgisterRes i {
-  position: absolute;
-  font-size: 15px;
-  left: 6px;
 }
 
 #cadastrar-resgisterRes {
   background-color: #000;
   color: #fff;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 1rem;
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
   cursor: pointer;
-  width: 184px;
-  height: 44px;
-  flex-shrink: 0;
-  border-radius: 30px;
-  margin-top: 120px;
-  fill: #000;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+  width: 11.5rem;
+  height: 2.75rem;
+  border-radius: 1.875rem;
+
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
   border: none;
 }
 
@@ -107,19 +110,48 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 25px;
-  margin-top: 55px;
+  padding: 0 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 
 a {
   text-decoration: none;
   color: #069bff;
 }
-@media (max-width: 360px) {
+
+@media (max-width: 768px) {
+  #cadastro-resgisterRes p {
+    font-size: 1.125rem;
+  }
+
   .input-resgisterRes {
-    width: 90vw;
+    max-width: 22rem;
+    height: 3.2rem;
+  }
+
+  #cadastrar-resgisterRes {
+    font-size: 0.9375rem;
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-resgisterRes {
+    max-width: 90%;
+    height: 3rem;
+  }
+
+  #cadastrar-resgisterRes {
+    font-size: 0.875rem;
+    width: 9rem;
+    height: 2.25rem;
+  }
+
+  #cadastro-resgisterRes p {
+    font-size: 1rem;
   }
 }
