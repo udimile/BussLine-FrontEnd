@@ -31,8 +31,25 @@ export default function MapaTrack() {
       img.src = imageUrl;
       img.alt = "Perfil";
       marker.appendChild(img);
-
-      new mapboxgl.Marker(marker, { offset: [0, -920] })
+      const offsetValue =
+        window.innerWidth >= 1920
+          ? [10, -800]
+          : window.innerWidth === 1024
+          ? [10, -950]
+          : window.innerWidth === 414
+          ? [10, -730]
+          : window.innerWidth === 390
+          ? [10, -690]
+          : window.innerWidth === 375
+          ? [10, -650]
+          : window.innerWidth === 360
+          ? [10, -720]
+          : window.innerWidth === 820
+          ? [10, -1100]
+          : window.innerWidth === 768
+          ? [10, -950]
+          : [10, -1000];
+      new mapboxgl.Marker(marker, { offset: offsetValue })
         .setLngLat(lngLat)
         .addTo(map.current);
     };
