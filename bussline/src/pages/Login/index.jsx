@@ -123,7 +123,7 @@ export default function Login() {
 
               <p>
                 Não possui uma conta?
-                <Link to="/cadastro">Cadastre-se</Link>
+                <Link to="/cadastro"> Cadastre-se</Link>
               </p>
             </div>
           </form>

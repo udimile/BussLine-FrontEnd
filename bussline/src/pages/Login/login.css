@@ -5,136 +5,157 @@
   font-style: normal;
 }
 
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Estilo principal */
 .main-login {
   width: 100vw;
-  height: 150vh;
-  /* border-radius: 15px; */
+  min-height: 100vh;
   background: #592e83;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  display: block;
-  justify-content: center;
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 2rem 1rem;
+  position: relative;
 }
 
 .sair-login svg {
-  margin-top: 37px;
-  margin-left: 23px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 24px;
+  height: 24px;
 }
 
 .header-login {
   display: flex;
-  width: 100vw;
   justify-content: center;
-}
-
-#login-login {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  margin-top: 1rem;
 }
 
 #login-login p {
-  margin-top: 24px;
-}
-
-#login-login h4 {
-  color: var(--Schemes-On-Primary, #fff);
-  text-align: right;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding-left: 180px;
-  margin-top: -10px;
+  margin-top: 1.5rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .opcao-login {
-  margin-right: 7px;
-  margin-top: 50px;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .opcao-login label {
-  justify-content: space-between;
-  padding: 0 25px;
+  padding: 0 1.5rem;
+  color: #fff;
 }
 
+/* Inputs */
 .input-login {
-  background-color: rgb(255, 255, 255);
-  width: 368px;
-  height: 51px;
-  position: relative;
+  background-color: #fff;
+  width: 100%;
+  max-width: 23rem;
+  height: 3.1875rem;
   display: flex;
   align-items: center;
-  border-radius: 15px;
-  margin-bottom: 25px;
+  border-radius: 0.9375rem;
+  position: relative;
 }
 
 .input-login input {
-  border-radius: 15px;
-  position: absolute;
+  border-radius: 0.9375rem;
   height: 100%;
   width: 100%;
   border: none;
-  padding-left: 24px;
+  padding-left: 1.5rem;
+  font-size: 1rem;
 }
 
 .input-login ::placeholder {
   color: #592e83;
-  font-size: 15px;
-  font-style: normal;
+  font-size: 0.9375rem;
   font-weight: 300;
-  line-height: normal;
 }
 
-.input-login i {
-  position: absolute;
-  font-size: 15px;
-  left: 6px;
-}
-
+/* Botão */
 #entrar-login {
   background-color: #000;
   color: #fff;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 1rem;
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
   cursor: pointer;
-  width: 184px;
-  height: 44px;
-  flex-shrink: 0;
-  border-radius: 30px;
-  margin-top: 120px;
-  fill: #000;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+  width: 11.5rem;
+  height: 2.75rem;
+  border-radius: 1.875rem;
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
   border: none;
+  margin-top: 2rem;
 }
 
 .container-login {
   text-align: center;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 25px;
-  margin-top: 55px;
+  padding: 0 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
-}
-
-.container-login p {
-  margin-top: 24px;
+  gap: 1rem;
 }
 
 a {
   text-decoration: none;
   color: #069bff;
 }
-@media (max-width: 360px) {
-  .input-login {
-    width: 90vw;
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  #login-login p {
+    font-size: 1.125rem;
   }
-  #login-login h4 {
-    font-size: 13px;
+
+  .input-login {
+    max-width: 22rem;
+    height: 3.2rem;
+  }
+
+  #entrar-login {
+    font-size: 0.9375rem;
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-login {
+    max-width: 90%;
+    height: 3rem;
+  }
+
+  #entrar-login {
+    font-size: 0.875rem;
+    width: 9rem;
+    height: 2.25rem;
+  }
+
+  #login-login p {
+    font-size: 1rem;
   }
 }

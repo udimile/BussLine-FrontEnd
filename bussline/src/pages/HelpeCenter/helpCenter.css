@@ -9,7 +9,7 @@
   background: var(--Schemes-On-Primary, #fff);
   width: 100vw;
   height: 100vh;
-  /* border-radius: 15px; */
+  /* border-radius: 0.9375rem; */
 }
 
 .nav-container_helpCenter {
@@ -19,15 +19,15 @@
 }
 
 .nav-box_helpCenter {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
-  gap: 30px;
-  border-radius: 48px;
+  gap: 1.875rem;
+  border-radius: 3rem;
   justify-content: space-evenly;
-  height: 56px;
+  height: 3.5rem;
   width: 80%;
-  margin-top: 36px;
+  margin-top: 2.25rem;
   background-color: #592e83;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .search img {
-  width: 50px;
+  width: 3.125rem;
   height: auto;
   display: flex;
   margin-left: -10%;
@@ -48,7 +48,7 @@
 .procurar_hc {
   color: #ffffff;
   font-family: Poppins, var(--default-font-family);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   margin-left: 45%;
   display: flex;
@@ -59,65 +59,65 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-right: 200px;
-  gap: 15px;
+  padding-right: 12.5rem;
+  gap: 0.9375rem;
 }
 
 .perguntas img {
-  margin-left: 220px;
-  margin-bottom: -38px;
-  padding-bottom: 8px;
+  margin-left: 13.75rem;
+  margin-bottom: -2.375rem;
+  padding-bottom: 0.5rem;
 }
 
 .perguntas p {
-  font-size: 16px;
-  margin-left: 20px;
-  width: 210px;
+  font-size: 1rem;
+  margin-left: 1.25rem;
+  width: 13.125rem;
   color: #000;
   font-style: normal;
-  font-weight: 700px;
+  font-weight: 43.75rem;
   line-height: normal;
   font-weight: bolder;
 }
 
 #principal {
-  width: 352px;
-  height: 42px;
+  width: 22rem;
+  height: 2.625rem;
   flex-shrink: 0;
   fill: #592e83;
   margin-left: 1%;
 }
 
 #principal p {
-  margin-top: 30px;
+  margin-top: 1.875rem;
   text-align: left;
-  margin-left: 30px;
+  margin-left: 1.875rem;
 }
 
 .pergunta {
   background-color: #592e83;
-  border-radius: 7px;
+  border-radius: 0.4375rem;
   border-color: #592e83;
   background: #592e83;
   width: 90vw;
-  height: 45px;
-  margin-left: 20px;
+  height: 2.8125rem;
+  margin-left: 1.25rem;
 }
 
 .pergunta p {
-  width: 257px;
-  height: 19px;
+  width: 16.0625rem;
+  height: 1.1875rem;
   flex-shrink: 0;
   color: var(--Schemes-On-Primary, #fff);
-  font-size: 18px;
+  font-size: 1.125rem;
   text-align: center;
   align-items: center;
-  padding-top: 12px;
+  padding-top: 0.75rem;
 }
-@media (min-width: 360px) and (max-width: 429px) {
+@media (min-width: 22.5rem) and (max-width: 26.8125rem) {
   .help-center {
     width: 100vw;
-    height: 150vh;
+    height: 100vh;
     background: #fff;
   }
 }

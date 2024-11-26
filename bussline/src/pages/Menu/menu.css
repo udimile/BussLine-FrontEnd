@@ -8,14 +8,13 @@
 
 body {
   width: 100vw;
-  height: 100%;
-  background: gray;
+  height: 100vh;
 }
 
 .sidebar-menu {
   width: 100vw;
   height: 100%;
-  border-radius: 15px;
+
   background: #fff;
 }
 
@@ -23,8 +22,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 118px;
-  /* border-radius: 15px 15px 0px 0px; */
+  height: 7.375rem;
+
   background: #592e83;
   color: #fff;
 }
@@ -36,12 +35,12 @@ body {
 .top-content-menu .return-menu {
   display: inline-flex;
   text-align: center;
-  padding: 65px 24px 31px;
+  padding: 4.0625rem 1.5rem 1.9375rem;
 }
 
 .return-menu > span {
-  padding-top: 2px;
-  padding-left: 5px;
+  padding-top: 0.125rem;
+  padding-left: 0.3125rem;
 }
 
 .box-box {
@@ -55,8 +54,8 @@ body {
 }
 .ul-menu {
   margin: 0;
-  margin-left: 25px;
-  padding: 40px 0 40px 1%;
+  margin-left: 1.5625rem;
+  padding: 2.5rem 0 2.5rem 1%;
   list-style-type: none;
 }
 
@@ -64,8 +63,8 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .info-menu {
@@ -73,28 +72,28 @@ body {
   flex-direction: column;
   justify-content: left;
   align-items: start;
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 .name-menu {
   text-decoration: none;
   text-align: center;
   color: black;
 
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
 }
 .name-menu-bar {
-  margin-left: 10px;
+  margin-left: 0.625rem;
   text-decoration: none;
   text-align: center;
   color: black;
 
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
 }
 
 .email-menu {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
 
   color: black;
@@ -102,42 +101,27 @@ body {
 
 .editprofile-menu > a {
   text-decoration: none;
-  padding-left: 20px;
+  padding-left: 1.25rem;
   color: #592e83;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
 #logout-menu {
-  padding-top: 20px;
+  padding-top: 1.25rem;
 }
 
 .hr-menu {
   width: 90vw;
-  height: 1px;
-  border: 17px;
-  border-top: 1px solid #592e83;
+  height: 0.0625rem;
+  border: 1.0625rem;
+  border-top: 0.0625rem solid #592e83;
   list-style-type: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: -6px;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  margin-left: -0.375rem;
 }
 .icon-menu {
-  width: 51px;
-  height: 51px;
-}
-
-@media (min-width: 768px) {
-  body {
-    width: 100vw;
-    height: 150vw;
-    background: gray;
-  }
-
-  .sidebar-menu {
-    width: 100vw;
-    height: 150vw;
-    border-radius: 15px;
-    background: #fff;
-  }
+  width: 3.1875rem;
+  height: 3.1875rem;
 }
