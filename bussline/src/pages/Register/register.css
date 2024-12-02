@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-Register {
+  width: 390px;
+  height: 932px;
+  /* border-radius: 15px; */
+  background: #592e83;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.sair-Register svg {
+  margin-top: 37px;
+  margin-left: 23px;
+}
+
+.header-Register {
+  margin-left: 125px;
+  margin-top: 10px;
+}
+
+#cadastro-Register {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#cadastro-Register p {
+  margin-top: 24px;
+}
+
+.opcao-Register {
+  margin-right: 7px;
+  margin-top: 50px;
+}
+
+.opcao-Register label {
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.input-Register {
+  background-color: rgb(255, 255, 255);
+  width: 368px;
+  height: 51px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+.input-Register input {
+  border-radius: 15px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding-left: 26px;
+}
+
+.input-Register ::placeholder {
+  color: #592e83;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.input-Register i {
+  position: absolute;
+  font-size: 15px;
+  left: 6px;
+}
+.cadastrar-Register {
+  margin-top: -90px;
+}
+#cadastrar-Register {
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 184px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  margin-top: 120px;
+  fill: #000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+  border: none;
+}
+
+.container-Register {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: #069bff;
+}
