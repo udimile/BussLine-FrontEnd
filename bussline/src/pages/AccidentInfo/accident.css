@@ -1,0 +1,144 @@
+root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.main-container {
+  position: relative;
+  width: 390px;
+  height: 932px;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+  margin-left: 0px;
+}
+.header {
+  position: relative;
+  width: 430px;
+  height: 118px;
+  margin: 0 0 0 0;
+  background: #592e83;
+  z-index: 16;
+}
+.logo {
+  /* position: absolute; */
+  width: 11.4%;
+  height: 26.27%;
+  top: 50.85%;
+  left: 75.77%;
+
+  /* background: url(/imgs/logo.png) no-repeat center; */
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  width: 17px;
+  height: 22px;
+  top: 65px;
+  left: 24px;
+}
+
+.icon-button img {
+  padding-right: 4px;
+  width: 14px;
+  height: auto;
+}
+
+.rotas {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  height: 20px;
+  top: 65px;
+  left: 48px;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.section_2 {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.acidente,
+.transito {
+  margin-top: 16px;
+}
+
+.alinhar {
+  display: flex;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  height: 30px;
+  z-index: 0;
+  align-items: center;
+  justify-content: center;
+  background: url(../../assets/background-accidentInfo.svg) no-repeat;
+  width: fit-content;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 32px;
+  margin-left: -10px;
+}
+
+.box > p {
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.description {
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #592e83;
+}
